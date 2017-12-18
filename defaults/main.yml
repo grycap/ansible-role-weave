@@ -1,0 +1,4 @@
+---
+# Type of node to install: front or wn
+weave_type_of_node: "front"
+weave_frontend_private_ip: ""

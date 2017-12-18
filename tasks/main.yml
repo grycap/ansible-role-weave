@@ -1,0 +1,17 @@
+---
+- name: Check that the weave exists
+  stat:
+    path: /usr/local/bin/weave
+  register: stat_result
+
+- block:
+  - name: Launch weave
+    copy: 
+      dest: /usr/local/bin/weave
+      src: weave
+      mode: 0755
+
+  - name: Include "{{weave_type_of_node}}" weave recipe
+    include: "{{weave_type_of_node}}.yml"
+    
+  when: stat_result.stat.exists == False 

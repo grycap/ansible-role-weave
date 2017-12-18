@@ -1,0 +1,9 @@
+---
+- name: Launch weave
+  command: weave launch
+
+- name: Set weave variable
+  shell: eval $(weave env)
+
+- name: Expose weave IP
+  command: weave expose

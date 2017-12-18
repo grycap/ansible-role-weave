@@ -1,0 +1,6 @@
+---
+- name: Launch weave
+  command: weave launch "{{ weave_frontend_private_ip }}"
+
+- name: Set weave variable
+  shell: eval $(weave env)
