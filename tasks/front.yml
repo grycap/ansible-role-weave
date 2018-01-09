@@ -1,9 +1,7 @@
 ---
 - name: Launch weave
   command: weave launch
-
-- name: Set weave variable
-  shell: eval $(weave env)
+  ignore_errors: yes
 
 - name: Expose weave IP
   command: weave expose

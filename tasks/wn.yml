@@ -1,6 +1,4 @@
 ---
-- name: Launch weave
-  command: weave launch "{{ weave_frontend_private_ip }}"
-
-- name: Set weave variable
-  shell: eval $(weave env)
+- name: Launch weave with IP "{{ weave_frontend_ip }}"
+  command: weave launch "{{ weave_frontend_ip }}"
+  ignore_errors: yes
