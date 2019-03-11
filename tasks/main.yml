@@ -1,7 +1,7 @@
 ---
 - name: Copy weave
   copy: 
-    dest: /usr/local/bin/weave
+    dest: /usr/local/bin/weave --ipalloc-range {{ weave_ipalloc_range }}
     src: weave
     mode: 0755      
 
