@@ -1,6 +1,6 @@
 ---
 - name: Launch weave
-  command: weave launch  --ipalloc-range {{ weave_ipalloc_range }}
+  command: weave launch --ipalloc-range {{ weave_ipalloc_range }}
   ignore_errors: yes
 
 - name: Expose weave IP
